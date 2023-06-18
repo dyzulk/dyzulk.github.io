@@ -60,10 +60,10 @@ function kirimPesan() {
 
     var nama = document.getElementById('name');
     var email = document.getElementById('email');
-    var email = document.getElementById('subject');
+    var subject = document.getElementById('subject');
     var pesan = document.getElementById('message');
 
-    var gabungan = 'Nama%3A%0A' + name.value + '%0AEmail%3A%0A' + email.value + '%0ASubject%3A%0A' + subject.value + '%0APesan%3A%0A' + message.value;
+    var gabungan = 'Nama%3A%0A%0A' + nama.value + '%0AEmail%3A%0A%0A' + email.value + '%0ASubject%3A%0A%0A' + subject.value + '%0APesan%3A%0A%0A' + message.value;
 
     var token = '6260715907:AAHYHXLrAwSjnUecHxLi0AC01k1FM0xbr8M'; // Ganti dengan token bot yang kamu buat
     var grup = '-836942032'; // Ganti dengan chat id dari bot yang kamu buat
