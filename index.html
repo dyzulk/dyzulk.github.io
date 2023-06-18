@@ -179,11 +179,11 @@
 
                 <div class="contact__container bd-grid">
                     <form action="https://formspree.io/f/mdobzbbr" method="POST" class="contact__form">
-                        <input type="text" name="name" placeholder="Name" class="contact__input" required="">
-                        <input type="mail" name="email"  placeholder="Email" class="contact__input" required="">
-                        <input type="text" name="subject"  placeholder="Subject" class="contact__input" required="">
-                        <textarea type="message" name="message" placeholder="Message" id="" cols="0" rows="10" class="contact__input" required=""></textarea>
-                        <button class="contact__button button" type="submit" name="submit" value="submit" >Send</button>
+                        <input type="text" name="name" id="name" placeholder="Name" class="contact__input" required="">
+                        <input type="mail" name="email"  id="email" placeholder="Email" class="contact__input" required="">
+                        <input type="text" name="subject"  id="subject" placeholder="Subject" class="contact__input" required="">
+                        <textarea type="message" name="message" id="message" placeholder="Message" id="" cols="0" rows="10" class="contact__input" required=""></textarea>
+                        <button class="contact__button button" type="submit" name="submit" value="submit" onclick="kirimPesan()" >Send</button>
                     </form>
                 </div>
                 <div style="text-align: center;">
@@ -192,12 +192,7 @@
             </section>
         </main>
 	
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-		        <!--===== FOOTER =====-->
+	<!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">myPortfolio</p>
             <div class="footer__social">
@@ -207,5 +202,15 @@
             </div>
             <p class="footer__copy">Copyright &#169; 2022 - <script>document.write(new Date().getFullYear())</script>  <a href="/" style="color: #fff;">Herdy Iskandar</a>. All rigths reserved</p>
         </footer>
+		
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+
+        <!--===== CONTACT FORM TELEGRAM =====-->
+        <script src="assets/js/telegrambot.js"></script>
+	
     </body>
 </html>
