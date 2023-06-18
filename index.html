@@ -17,11 +17,29 @@
 	<title>Muhammad Herdy Iskandar</title>
     </head>
     <body>
+	            <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="/" class="nav__logo" > <img style="width: 150px;" class="logopng" src="assets/img/logo.png" alt="Portfolio Herdy Iskandar" > </a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
         <main class="l-main">
-
-            
-            <?php include($IPATH."navbar.php")?>
-
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
@@ -179,8 +197,7 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
-    </body>
-	        <!--===== FOOTER =====-->
+		        <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">myPortfolio</p>
             <div class="footer__social">
@@ -190,4 +207,5 @@
             </div>
             <p class="footer__copy">Copyright &#169; 2022 - <script>document.write(new Date().getFullYear())</script>  <a href="/" style="color: #fff;">Herdy Iskandar</a>. All rigths reserved</p>
         </footer>
+    </body>
 </html>
