@@ -12,7 +12,7 @@ function kirimPesan() {
     var grup = '-836942032'; // Ganti dengan chat id dari bot yang kamu buat
 
     $.ajax({
-        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}`,
         method: `POST`,
     })
 }
