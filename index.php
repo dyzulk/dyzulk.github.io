@@ -15,6 +15,15 @@
 	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 	
 	<title>Muhammad Herdy Iskandar</title>
+	<?php
+	// Load nilai variabel dari berkas .env
+	$botToken = getenv('TELEGRAM_BOT_TOKEN');
+	$botGrup = getenv('TELEGRAM_BOT_GRUP');
+	
+	// Kodekan nilai variabel untuk digunakan dalam JavaScript
+	$encodedBotToken = json_encode($botToken);
+	$encodedBotGrup = json_encode($botGrup);
+	?>
     </head>
     <body>
 	            <!--===== HEADER =====-->
