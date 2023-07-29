@@ -15,21 +15,6 @@
 	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 	
 	<title>Muhammad Herdy Iskandar</title>
-	<?php
-	// Load nilai variabel dari berkas .env
-	$botToken = getenv('TELEGRAM_BOT_TOKEN');
-	$botGrup = getenv('TELEGRAM_BOT_GRUP');
-	
-	// Kodekan nilai variabel untuk digunakan dalam JavaScript
-	$encodedBotToken = json_encode($botToken);
-	$encodedBotGrup = json_encode($botGrup);
-	?>
-	    
-	<script>
-	// Dekodekan nilai variabel dari PHP
-	var token = <?php echo $encodedBotToken; ?>;
-	var grup = <?php echo $encodedBotGrup; ?>;
-	</script>
     </head>
     <body>
 	            <!--===== HEADER =====-->
@@ -226,7 +211,7 @@
         <script src="assets/js/main.js"></script>
 
         <!--===== CONTACT FORM TELEGRAM =====-->
-        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/telegrambot.js"></script>
 	
     </body>
 </html>
