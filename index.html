@@ -24,6 +24,12 @@
 	$encodedBotToken = json_encode($botToken);
 	$encodedBotGrup = json_encode($botGrup);
 	?>
+	    
+	<script>
+	// Dekodekan nilai variabel dari PHP
+	var token = <?php echo $encodedBotToken; ?>;
+	var grup = <?php echo $encodedBotGrup; ?>;
+	</script>
     </head>
     <body>
 	            <!--===== HEADER =====-->
@@ -220,7 +226,7 @@
         <script src="assets/js/main.js"></script>
 
         <!--===== CONTACT FORM TELEGRAM =====-->
-        <script src="assets/js/telegrambot.js"></script>
+        <script src="assets/js/scripts"></script>
 	
     </body>
 </html>
