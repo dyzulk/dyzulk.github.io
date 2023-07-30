@@ -26,4 +26,4 @@ Interested in working with me? Need help on your project? Or just wanna say hi? 
 - Dribbble:	[dyzulk](http://dribbble.com/dyzulk)
 - Behance: [dyzulk](https://www.behance.net/dyzulk)
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=dyzulk.dyzulk.github.io&left_color=green&right_color=red)z
+![visitors](https://visitor-badge.glitch.me/badge?page_id=dyzulk.dyzulk.github.io&left_color=green&right_color=red)
