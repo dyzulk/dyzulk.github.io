@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { Link } from 'react-router-dom'
-import { Loader2, Calendar, ArrowRight } from 'lucide-react'
+import { Loader2, ArrowRight } from 'lucide-react'
 
 export default function Blog() {
   const [posts, setPosts] = useState<any[]>([])

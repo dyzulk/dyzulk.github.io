@@ -3,7 +3,6 @@ import { Command } from 'cmdk'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '@/lib/supabase'
 import { Search, FileText, Code, Loader2 } from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 export function SearchCommand() {
   const [open, setOpen] = useState(false)

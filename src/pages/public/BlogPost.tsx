@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { supabase } from '@/lib/supabase'
 import { MarkdownViewer } from '@/components/ui/markdown-viewer'
-import { Loader2, ArrowLeft, Clock, Calendar } from 'lucide-react'
+import { Loader2, ArrowLeft, Calendar } from 'lucide-react'
 
 export default function BlogPost() {
   const { slug } = useParams()
