@@ -35,7 +35,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          cp dist/index.html dist/404.html
         env:
           # Inject secrets/vars from GitHub Repository Settings
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }} 
