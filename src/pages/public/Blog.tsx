@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import { Link } from 'react-router-dom'
-import { Loader2, Calendar } from 'lucide-react'
+import { Loader2, Calendar, ArrowRight } from 'lucide-react'
 
 export default function Blog() {
   const [posts, setPosts] = useState<any[]>([])
@@ -24,42 +24,55 @@ export default function Blog() {
     setLoading(false)
   }
 
-  if (loading) return <div className="flex justify-center py-20"><Loader2 className="animate-spin" /></div>
+  if (loading) return <div className="flex justify-center items-center h-[50vh]"><Loader2 className="animate-spin text-white" /></div>
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-center">Blog & Tutorials</h1>
+    <div className="container mx-auto px-4 py-20 max-w-4xl">
+      <div className="mb-16 text-center">
+        <h1 className="text-5xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">Writing</h1>
+        <p className="text-muted-foreground">Thoughts, tutorials, and insights on development.</p>
+      </div>
       
-      <div className="space-y-8">
+      <div className="space-y-6">
         {posts.map((post) => (
-          <article key={post.id} className="flex flex-col md:flex-row gap-6 border-b border-slate-100 dark:border-slate-800 pb-8 last:border-0 hover:bg-slate-50 dark:hover:bg-slate-900/50 p-4 rounded-xl transition-colors">
-            {post.cover_image && (
-              <div className="w-full md:w-48 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-slate-200">
-                <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover" />
-              </div>
-            )}
-            <div className="flex-1">
-              <div className="flex items-center gap-2 text-sm text-slate-500 mb-2">
-                <Calendar size={14} />
-                {new Date(post.created_at).toLocaleDateString()}
-                <div className="flex gap-2">
-                  {post.tags?.map((tag: string) => (
-                    <span key={tag} className="text-blue-500 font-medium">#{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <Link to={`/blog/${post.slug}`}>
-                <h2 className="text-2xl font-bold mb-2 hover:text-blue-600 transition-colors">
-                    {post.title}
-                </h2>
-              </Link>
-              <p className="text-slate-600 dark:text-slate-400 line-clamp-2">
-                {post.excerpt || 'No description available.'}
-              </p>
-              <Link to={`/blog/${post.slug}`} className="inline-block mt-4 text-sm font-medium text-blue-600 hover:underline">
-                Read Article →
-              </Link>
-            </div>
+          <article key={post.id} className="group relative">
+            <Link to={`/blog/${post.slug}`} className="block p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300">
+               <div className="flex flex-col md:flex-row gap-8">
+                  {/* Content */}
+                  <div className="flex-1 order-2 md:order-1">
+                    <div className="flex items-center gap-3 text-xs font-mono text-muted-foreground mb-4">
+                      <span>{new Date(post.created_at).toLocaleDateString()}</span>
+                      {post.tags?.length > 0 && (
+                        <>
+                          <span>•</span>
+                          <span className="text-primary/80">#{post.tags[0]}</span>
+                        </>
+                      )}
+                    </div>
+                    
+                    <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                        {post.title}
+                    </h2>
+                    
+                    <p className="text-muted-foreground leading-relaxed line-clamp-2 md:line-clamp-3 mb-6">
+                      {post.excerpt || 'No description available.'}
+                    </p>
+
+                    <div className="flex items-center gap-2 text-sm font-medium text-white/80 group-hover:text-white group-hover:translate-x-1 transition-all">
+                      Read Article <ArrowRight size={16} />
+                    </div>
+                  </div>
+
+                  {/* Optional Image */}
+                  {post.cover_image && (
+                    <div className="w-full md:w-48 h-32 md:h-auto flex-shrink-0 order-1 md:order-2">
+                       <div className="w-full h-full rounded-xl overflow-hidden bg-white/5 border border-white/5">
+                         <img src={post.cover_image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                       </div>
+                    </div>
+                  )}
+               </div>
+            </Link>
           </article>
         ))}
       </div>

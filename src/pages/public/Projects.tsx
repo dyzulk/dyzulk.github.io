@@ -26,29 +26,31 @@ export default function Projects() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
-        <Loader2 className="animate-spin text-blue-500" size={32} />
+        <Loader2 className="animate-spin text-white" size={32} />
       </div>
     )
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">My Portfolio</h1>
-        <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          Showcase of my detailed projects and technical case studies.
+    <div className="container mx-auto px-4 py-20">
+      <div className="text-center mb-16">
+        <h1 className="text-5xl font-bold mb-4 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">My Work</h1>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          A collection of projects exploring web development, design, and new technologies.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <div key={project.id} className="h-[420px]">
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
 
       {projects.length === 0 && (
-        <div className="text-center text-slate-500 py-12">
-          No projects found yet.
+        <div className="text-center text-muted-foreground py-20 bg-white/5 rounded-2xl border border-white/5">
+          <p>No projects found yet. Check back soon!</p>
         </div>
       )}
     </div>

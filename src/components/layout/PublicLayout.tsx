@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
+import { SearchCommand } from '@/components/ui/search-command'
 
 export default function PublicLayout() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-white/20">
+      <SearchCommand />
       <Navbar />
       <main className="flex-1 pt-24 pb-12">
         <Outlet />
