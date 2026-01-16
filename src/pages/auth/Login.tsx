@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
-import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
   const [loading, setLoading] = useState(false)
-  const navigate = useNavigate()
 
   const handleLogin = async () => {
     setLoading(true)
