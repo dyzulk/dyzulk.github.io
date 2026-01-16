@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom'
 import { ExternalLink, Github } from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 interface ProjectCardProps {
   project: any // Type this properly later
