@@ -3,13 +3,13 @@ import Navbar from './Navbar'
 
 export default function PublicLayout() {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50">
+    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-white/20">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 pt-24 pb-12">
         <Outlet />
       </main>
-      <footer className="py-8 border-t border-slate-100 dark:border-slate-900 text-center text-slate-500 text-sm">
-        <p>© {new Date().getFullYear()} Dyzulk. Built with React & Supabase.</p>
+      <footer className="py-8 border-t border-white/5 text-center text-muted-foreground text-sm">
+        <p>© {new Date().getFullYear()} DyzulkDev. Built with React & Supabase.</p>
       </footer>
     </div>
   )
