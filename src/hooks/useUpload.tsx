@@ -9,7 +9,7 @@ export const useUpload = () => {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const uploadFile = async (file: File, folder: string = 'uploads'): Promise<UploadResult | null> => {
+  const uploadFile = async (file: File, folder: string = 'imagine/misc'): Promise<UploadResult | null> => {
     setUploading(true);
     setError(null);
 
